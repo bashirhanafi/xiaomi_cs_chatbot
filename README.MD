@@ -21,26 +21,26 @@
 #### 1. Buka terminal dan masuk ke dir project
 
 Example:
-```json
+```python
 cd models
 ```
 
 #### 2. Instalasi model (asumsi sudah memiliki Ollama)
 
 Example:
-```json
+```python
 ollama run llama3.2:3b
 ```
 
 #### 3. Instalasi requirement
 
 Masuk ke dir chatbot
-```json
+```python
 cd chatbot
 ```
 
 Install package yang dibutuhkan
-```json
+```python
 pip install -r requirements.txt
 ```
 
@@ -48,7 +48,7 @@ pip install -r requirements.txt
 
 Buat file .env
 
-```json
+```python
 DB_USER = "<username>"
 DB_PASSWORD = "<password>"
 DB_HOST = "<host>"
@@ -294,21 +294,21 @@ class CheckGuarantee(BaseTool):
 #### 1. Pastikan fastapi & uvicorn sudah terinstall
 
 Example:
-```json
+```python
 pip install fastapi uvicorn
 ```
 
 #### 2. Jalan menggunakan uvicorn
 
 Example:
-```json
+```python
 uvicorn main:app --reload
 ```
 
 #### 3. Jalankan di Browser
 
 Example:
-```json
+```python
 http://127.0.0.1:8000/docs
 ```
 
