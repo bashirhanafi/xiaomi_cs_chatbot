@@ -115,27 +115,27 @@ Sentence Transformers (SBERT) adalah model Transformer yang digunakan untuk meng
 ## Daftar Pertanyaan
 ### 1. Sapa Pengguna
 #### Request
-```json
+```python
 {
   "message": "Halo, apa kabar??"
 }
 ```
 #### Response
-```json
+```python
 {
   "response": "Halo! Kabar baik, saya senang bisa berbicara dengan Anda. Apakah Anda memiliki pertanyaan tentang pesanan atau produk Xiaomi lainnya? Saya di sini untuk membantu Anda."
 }
 ```
 ### 2. Stok Produk
 #### Request
-```json
+```python
 {
   "message": "Stok redmi note 14 apakah sudah ada? Kalo iya, ada variant apa saja?"
 }
 ```
 
 #### Response
-```json
+```python
 {
   "response": "Stok Redmi Note 14 sudah ada dan tersedia dalam beberapa variant. Berikut adalah informasi tentang stok dan harga untuk setiap variant:
   - Mist Purple/8 GB + 128 GB: Stok 10 unit, Harga Rp 2.399.000
@@ -152,14 +152,14 @@ Sentence Transformers (SBERT) adalah model Transformer yang digunakan untuk meng
 
 ### 3. Status Pesanan
 #### Request
-```json
+```python
 {
   "message": "pesanan atas nama Rizan Rifaldisya ada dimana?"
 }
 ```
 
 #### Response
-```json
+```python
 {
   "response": "Terima kasih telah memilih Xiaomi! Pesanan Anda oleh Rizan Rifaldisya saat ini dalam proses pengiriman dan sedang dalam perjalanan ke alamat Anda. Silakan menunggu pesanan Anda tiba di tempat Anda. Jika Anda memiliki pertanyaan atau kekhawatiran lain, jangan ragu untuk bertanya!"
 }
@@ -167,14 +167,14 @@ Sentence Transformers (SBERT) adalah model Transformer yang digunakan untuk meng
 
 ### 4. Spesifikasi Produk
 #### Request
-```json
+```python
 {
   "message": "Aku mau tahu spesifikasi dari Poco F7 dong"
 }
 ```
 
 #### Response
-````json
+````python
 {
   "response": "Poco F7 memiliki spesifikasi sebagai berikut:
   * Prosesor: Platform Mobile Snapdragon 8s Gen 4
