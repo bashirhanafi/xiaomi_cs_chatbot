@@ -20,16 +20,14 @@ Membantu pelanggan Xiaomi secara otomatis dalam menjawab pertanyaan dasar terkai
 12. Hasil generasi teks ini akan menjadi respon pengguna yang diterima melalui format JSON.
 
 ## Cara Instalasi & Requirement (Local)
-#### 1. Git clone
+#### 1. Git Clone
 
-Example:
 ```python
 git clone https://github.com/bashirhanafi/xiaomi_cs_chatbot.git
 ```
 
 #### 2. Instalasi model (asumsi sudah memiliki Ollama)
 
-Example:
 ```python
 ollama run llama3.2:3b
 ```
@@ -226,7 +224,7 @@ Sentence Transformers (SBERT) adalah model Transformer yang digunakan untuk meng
 
 
 
-## Daftar Toolcall
+## Daftar Tool Call
 ### 1. Check List of Product
 ```python
 class OrderListInput(BaseModel):
@@ -295,22 +293,24 @@ class CheckGuarantee(BaseTool):
 ## Cara run FastAPI (local)
 #### 1. Pastikan fastapi & uvicorn sudah terinstall
 
-Example:
 ```python
 pip install fastapi uvicorn
 ```
 
 #### 2. Jalan menggunakan uvicorn
 
-Example:
 ```python
 uvicorn main:app --reload
 ```
 
 #### 3. Jalankan di Browser
 
-Example:
 ```python
 http://127.0.0.1:8000/docs
 ```
 
+# Referensi
+1. [ChatOllama](https://python.langchain.com/docs/integrations/chat/ollama/) 
+2. [Migrating off ConversationBufferWindowMemory or ConversationTokenBufferMemory](https://python.langchain.com/docs/versions/migrating_memory/conversation_buffer_window_memory/)
+3. [langchain-postgres - GitHub](https://github.com/langchain-ai/langchain-postgres?tab=readme-ov-file)  
+4. [AgentExecutor](https://python.langchain.com/api_reference/langchain/agents/langchain.agents.agent.AgentExecutor.html#langchain.agents.agent.AgentExecutor)
