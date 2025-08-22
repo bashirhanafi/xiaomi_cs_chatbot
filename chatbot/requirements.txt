@@ -1,0 +1,12 @@
+langchain>=0.3.1
+langchain-ollama>=0.1.0
+langchain-community
+asyncpg
+langchain-core
+langchain-huggingface
+pypdf
+langchain-postgres
+fastapi
+uvicorn
+python-dotenv
+sentence-transformers
