@@ -2,6 +2,8 @@
 ![Flow](chatbot/img/flow.png)
 
 ## Overview
+### Tujuan Chatbot
+Membantu pelanggan Xiaomi secara otomatis dalam menjawab pertanyaan dasar terkait stok produk, status pesanan, spesifikasi produk, dan kebijakan garansi dan dapat mengurangi beban tim customer service manual serta meningkatkan kepuasan pelanggan. Chatbot ini menggunakan Llama3.2:3b yang dapat menangani pertanyaan-pertanyaan, meningat percakapan dengan sistem memori (3 interaksi sebelumnya), dan menyimpan history percakapan ke database.
 
 ### Algoritma 
 1. Saat chatbot pertama kali dijalankan, pengguna dapat memberikan pesan sebagai input.
@@ -18,11 +20,11 @@
 12. Hasil generasi teks ini akan menjadi respon pengguna yang diterima melalui format JSON.
 
 ## Cara Instalasi & Requirement (Local)
-#### 1. Buka terminal dan masuk ke dir project
+#### 1. Git clone
 
 Example:
 ```python
-cd models
+git clone https://github.com/bashirhanafi/xiaomi_cs_chatbot.git
 ```
 
 #### 2. Instalasi model (asumsi sudah memiliki Ollama)
@@ -59,14 +61,14 @@ DB_NAME = "cs_chatbot"
 ## Desain Database
 ![Database Design](chatbot/img/database-design.png)
 
-#### Tabel Customer
+#### A. Tabel Customer
 | Column Name   | Type         | Description               |
 |---------------|--------------|---------------------------|
 | id            | INTEGER (PK) | Unique ID of the customer |
 | customer_name | VARCHAR      | Full name of the customer |
 | email         | VARCHAR      | Email of the customer     |
 
-#### Tabel Order
+#### B. Tabel Order
 | Column Name | Type         | Description              |
 |-------------|--------------|--------------------------|
 | id          | INTEGER (PK) | Unique ID of the order   |
@@ -77,7 +79,7 @@ DB_NAME = "cs_chatbot"
 | total       | INTEGER      | Total for the order      |
 | status      | VARCHAR      | Status for the order     |
 
-#### Tabel Product
+#### C. Tabel Product
 | Column Name   | Type         | Description                            |
 |---------------|--------------|----------------------------------------|
 | id            | INTEGER (PK) | Unique ID of the product               |
@@ -87,7 +89,7 @@ DB_NAME = "cs_chatbot"
 | qty           | INTEGER      | Qty of the product                     |
 | price         | BIG INT      | Price of the product                   |
 
-#### Chat history table
+#### D. Tabel Chat History
 | Column Name | Type         | Description                     |
 |-------------|--------------|---------------------------------|
 | id          | INTEGER (PK) | Unique ID of the chat history   |
@@ -273,7 +275,7 @@ class CheckSpecification(BaseTool):
     # implementation
 ```
 
-#### 4. Check Guarantee
+### 4. Check Guarantee
 ```python
 class CheckGuaranteeInput(BaseModel):
     product_name: str = Field(..., description="Nama produk untuk cek garansi produk")
