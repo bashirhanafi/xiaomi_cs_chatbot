@@ -56,7 +56,7 @@ session_id = str(uuid.uuid4())
 chat_history = PostgresChatMessageHistory(table_name, session_id, sync_connection=sync_connection)
 
 memory = ConversationBufferWindowMemory(memory_key="chat_history", 
-                                        k=6, 
+                                        k=6, # 3 interaksi sebelumnya 
                                         return_messages=True)
 
 # Load previous messages from DB
