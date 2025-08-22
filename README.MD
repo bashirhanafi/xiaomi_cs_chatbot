@@ -197,13 +197,13 @@ Sentence Transformers (SBERT) adalah model Transformer yang digunakan untuk meng
 
 ### 5. Garansi Produk
 #### Request
-```json
+```python
 {
   "message": "Bagaimana garansi produk dari Xiaomi 15? saya ingin tahu detailnya"
 }
 ```
 #### Response
-```json
+```python
 {
   "response": "Berikut adalah detail garansi produk dari Xiaomi 15:
   1. Alamat lengkap pelanggan dan kontak yang dapat dihubungi harus disediakan oleh pelanggan.
@@ -226,7 +226,7 @@ Sentence Transformers (SBERT) adalah model Transformer yang digunakan untuk meng
 
 ## Daftar Toolcall
 ### 1. Check List of Product
-```json
+```python
 class OrderListInput(BaseModel):
     product_name: str = Field(..., description="Nama produk untuk cek mengecek ketersediaan produk")
     variant: Optional[str] = Field(..., description='Variant dari produk untuk mengecek ketersediaan produk')
@@ -242,7 +242,7 @@ class CheckListProduct(BaseTool):
 ```
 
 ### 2. Check Order Status
-```json
+```python
 class OrderStatusInput(BaseModel):
     customer_name: str = Field(..., description="Nama customer untuk cek status pesanan")
     question: str = Field(..., description="query dari user")
@@ -257,7 +257,7 @@ class CheckOrderStatusTool(BaseTool):
 ```
 
 ### 3. Check Specification
-```json
+```python
 class CheckSpecificationInput(BaseModel):
     product_name: str = Field(..., description="Nama produk untuk cek spesifikasi produk")
     question: str = Field(..., description="query dari user")
@@ -274,7 +274,7 @@ class CheckSpecification(BaseTool):
 ```
 
 #### 4. Check Guarantee
-```json
+```python
 class CheckGuaranteeInput(BaseModel):
     product_name: str = Field(..., description="Nama produk untuk cek garansi produk")
     question: str = Field(..., description="query dari user")
