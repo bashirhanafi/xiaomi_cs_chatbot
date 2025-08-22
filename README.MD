@@ -306,7 +306,7 @@ uvicorn main:app --reload
 #### 3. Jalankan di Browser
 
 ```python
-http://127.0.0.1:8000/docs
+http://localhost:8000/docs
 ```
 
 # Referensi
