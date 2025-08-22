@@ -1,5 +1,5 @@
 # Xiaomi AI Customer Service Chatbot
-![Flow](img/flow.png)
+![Flow](chatbot/img/flow.png)
 
 ## Overview
 
@@ -57,7 +57,7 @@ DB_NAME = "cs_chatbot"
 ```
 
 ## Desain Database
-![Database Design](img/database-design.png)
+![Database Design](chatbot/img/database-design.png)
 
 #### Tabel Customer
 | Column Name   | Type         | Description               |
